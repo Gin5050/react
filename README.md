@@ -77,3 +77,30 @@ npx create-react-app <フォルダ名>
 cd react_app
 yarn start
 ```
+
+`yarn start`を実行するとブラウザで
+
+<img src="../img/readme/yarn_start.png" title="サンプル">
+
+## ReactでTypescript
+
+`create-react-app`はインストール済みとする。
+ただし`create-react-app`はグローバルでインストールされてないといけない。
+
+```bash
+yarn global add create-react-app
+```
+
+で、これだけだとPATHが通ってないので、`.bash_profile`などに以下を追記。
+
+```bash
+export PATH="$PATH:`yarn global bin`"
+```
+
+これで以下を実行。
+
+```bash
+create-react-app ts_react --typescript
+```
+
+すると`tsconfig.json`などがある状態でプロジェクトが作成される。
